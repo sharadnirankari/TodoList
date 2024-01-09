@@ -1,7 +1,21 @@
 // App.js
-import React from "react";
-import TodoList from "./TodoList";
+import * as React from "react";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import HomeScreen from "./Screen/HomeScreen"; // Import your existing screens
+import TodoListScreen from "./Screen/TodoListScreen"; // Import the new TodoList screen
 
-export default function App() {
-  return <TodoList />;
+const Stack = createNativeStackNavigator();
+
+function App() {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="TodoList" component={TodoListScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
 }
+
+export default App;

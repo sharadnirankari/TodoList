@@ -25,7 +25,7 @@ const TodoList = () => {
   };
 
   return (
-    <View style={{ flex: 1, padding: 20, marginTop: 40 }}>
+    <View style={{ flex: 1, padding: 20 }}>
       <TextInput
         style={{
           height: 40,
